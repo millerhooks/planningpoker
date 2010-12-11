@@ -1,0 +1,4 @@
+*.pyc
+test.DB
+media/dynamic
+local_settings.py
