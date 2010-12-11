@@ -13,7 +13,7 @@ DECK = (
 )
 
 class UserProfile(model.Model):
-    avatar  = models.FileField(upload_to="dynamic/files", blank=True)
+    avatar  = models.FileField(upload_to="dynamic/avatars", blank=True)
     bio     = models.TextField(blank=True)
     title   = models.CharField(max_length=255)
 
