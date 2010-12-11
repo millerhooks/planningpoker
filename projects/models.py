@@ -19,15 +19,14 @@ class UserProfile(model.Model):
 
 class Project(model.Model):
     owner       = models.ForeignKey(User)
-    managers    = models.ManyToManyField(User)
+    managers    = models.ManyToManyField(User, blank=True, null=True)
     description = models.TextField(blank=True)
     #tags
     
 class Story(model.Model):
-    story           = models.ForeignKey(Story)
     description     = models.TextField(blank=True)
     project         = models.ForeignKey(Project)
-    developers      = models.ManyToManyField(User)
+    developers      = models.ManyToManyField(User, blank=True, null=True)
     owner           = models.ForeignKey(User)
 
 class PlayedCard(model.Model):
